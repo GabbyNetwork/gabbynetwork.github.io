@@ -22,11 +22,11 @@ document.addEventListener('mousemove', (e) => {
         const distance = Math.sqrt(distX * distX + distY * distY);
 
         // Maggiore è la distanza, minore è l'effetto
-        const maxDistance = 150;
-        const offset = Math.min(maxDistance / distance, 1);
-        
-        const moveX = distX * offset * 0.5;
-        const moveY = distY * offset * 0.5;
+        const maxDistance = 100; // Riduciamo la distanza per un effetto più visibile
+        const moveDistance = Math.max(maxDistance - distance, 0) / 5;
+
+        const moveX = (distX / distance) * moveDistance;
+        const moveY = (distY / distance) * moveDistance;
 
         span.style.transform = `translate(${moveX}px, ${moveY}px)`;
     });
