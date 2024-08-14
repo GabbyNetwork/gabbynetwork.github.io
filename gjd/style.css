@@ -94,7 +94,51 @@ nav ul li a:hover {
     animation: slideIn 1.5s ease-in-out forwards;
 }
 
-/* Animazioni */
+/* Sezione Video */
+.videos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    background-color: #ffe6f2;
+}
+
+.video-container {
+    max-width: 300px;
+    margin: 10px;
+    text-align: center;
+}
+
+.video-container video {
+    width: 100%;
+    border: 3px solid #ff66b2;
+    border-radius: 10px;
+    background-color: #ffe6f2;
+}
+
+.video-container h2 {
+    font-size: 1.5em;
+    color: #ff66b2;
+    margin-top: 10px;
+}
+
+.video-container p {
+    font-size: 1em;
+    color: #333;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .videos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .video-container {
+        max-width: 90%;
+    }
+}
+
 @keyframes popIn {
     0% {
         transform: scale(0.5);
